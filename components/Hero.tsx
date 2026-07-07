@@ -41,7 +41,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative min-h-[760px] overflow-hidden">
+    <section className="relative min-h-[620px] overflow-hidden md:min-h-[760px]">
       <div
         className="hero-bg absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/images/hero/hero.png')" }}
@@ -49,27 +49,27 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-black/50" />
 
-      <div className="relative mx-auto flex min-h-[760px] max-w-7xl items-center px-6">
+      <div className="relative mx-auto flex min-h-[620px] max-w-7xl items-center px-6 py-16 md:min-h-[760px] md:py-0">
         <div className="max-w-3xl text-white">
-          <p className="mb-5 text-sm font-semibold uppercase tracking-[0.35em] text-green-100">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-green-100 md:mb-5 md:text-sm md:tracking-[0.35em]">
             Bobai, Guangxi · Handmade Wicker Manufacturer
           </p>
 
-          <h1 className="text-5xl font-bold leading-tight md:text-7xl">
+          <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-7xl">
             Handcrafted Wicker & Rattan Products
           </h1>
 
-          <p className="mt-6 max-w-2xl text-xl leading-relaxed text-gray-100">
+          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-gray-100 md:mt-6 md:text-xl">
             We manufacture handmade wicker baskets, rattan furniture and
             natural home decor for wholesalers, retailers and lifestyle brands
             worldwide.
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row md:mt-10">
             <button
               type="button"
               onClick={() => scrollToSection("inquiry")}
-              className="rounded-lg bg-green-700 px-8 py-4 text-white transition hover:bg-green-800"
+              className="rounded-xl bg-green-700 px-7 py-4 text-base font-semibold text-white transition hover:bg-green-800"
             >
               Get a Free Quote
             </button>
@@ -77,26 +77,26 @@ export default function Hero() {
             <button
               type="button"
               onClick={() => scrollToSection("products")}
-              className="rounded-lg border border-white px-8 py-4 text-white transition hover:bg-white hover:text-gray-900"
+              className="rounded-xl border border-white px-7 py-4 text-base font-semibold text-white transition hover:bg-white hover:text-gray-900"
             >
               Explore Products
             </button>
           </div>
 
-          <div className="mt-12 grid max-w-2xl grid-cols-3 gap-6 border-t border-white/30 pt-6 text-sm text-gray-100">
+          <div className="mt-10 grid max-w-2xl grid-cols-3 gap-4 border-t border-white/30 pt-6 text-sm text-gray-100 md:mt-12 md:gap-6">
             <div>
-              <p className="text-2xl font-bold">20+</p>
-              <p className="mt-1">Years Experience</p>
+              <p className="text-xl font-bold md:text-2xl">Bobai</p>
+              <p className="mt-1">Local Supply</p>
             </div>
 
             <div>
-              <p className="text-2xl font-bold">OEM</p>
+              <p className="text-xl font-bold md:text-2xl">OEM</p>
               <p className="mt-1">Custom Service</p>
             </div>
 
             <div>
-              <p className="text-2xl font-bold">Global</p>
-              <p className="mt-1">Export Supply</p>
+              <p className="text-xl font-bold md:text-2xl">Export</p>
+              <p className="mt-1">Buyer Support</p>
             </div>
           </div>
         </div>
