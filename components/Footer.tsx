@@ -93,7 +93,7 @@ export default function Footer() {
 
             <p className="mt-6 leading-relaxed text-green-100">
               Handmade wicker baskets, rattan furniture and natural home decor
-              manufacturer from Bobai, Guangxi, China.
+              supplier from Bobai, Guangxi, China.
             </p>
           </div>
 
@@ -259,10 +259,7 @@ export default function Footer() {
 
               <li>WeChat: +86 198 1387 1687</li>
 
-              <li>
-                Location: No. 124 Xinxing Street, Bobai County, Yulin, Guangxi
-                Zhuang Autonomous Region, China
-              </li>
+              <li>Location: Bobai, Guangxi, China</li>
 
               <li>OEM / ODM Available</li>
             </ul>
