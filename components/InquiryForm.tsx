@@ -33,7 +33,8 @@ Product Interest: ${formData.product}
 Message:
 ${formData.message}
 
-Website: Bobai Wicker`;
+Website: https://bobai-wicker-china.netlify.app/
+Location: Bobai, Guangxi, China`;
   }
 
   function sendToWhatsApp() {
@@ -90,16 +91,52 @@ Website: Bobai Wicker`;
               </div>
 
               <div className="rounded-2xl bg-white p-6 shadow-sm">
-                <p className="font-semibold text-gray-900">
-                  Direct Contact
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                  Email: gaoshanyan1@gmail.com
-                  <br />
-                  WhatsApp: +86 198 1387 1687
-                  <br />
-                  WeChat: +86 198 1387 1687
-                </p>
+                <p className="font-semibold text-gray-900">Direct Contact</p>
+
+                <div className="mt-4 space-y-3 text-sm leading-relaxed text-gray-600">
+                  <p>
+                    <span className="font-semibold text-gray-800">
+                      Contact:
+                    </span>{" "}
+                    Shanyan Gao
+                  </p>
+
+                  <p>
+                    <span className="font-semibold text-gray-800">Email:</span>{" "}
+                    <a
+                      href="mailto:gaoshanyan1@gmail.com"
+                      className="text-green-800 underline"
+                    >
+                      gaoshanyan1@gmail.com
+                    </a>
+                  </p>
+
+                  <p>
+                    <span className="font-semibold text-gray-800">
+                      WhatsApp:
+                    </span>{" "}
+                    <a
+                      href="https://wa.me/8619813871687"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-green-800 underline"
+                    >
+                      +86 198 1387 1687
+                    </a>
+                  </p>
+
+                  <p>
+                    <span className="font-semibold text-gray-800">WeChat:</span>{" "}
+                    +86 198 1387 1687
+                  </p>
+
+                  <p>
+                    <span className="font-semibold text-gray-800">
+                      Location:
+                    </span>{" "}
+                    Bobai, Guangxi, China
+                  </p>
+                </div>
               </div>
             </div>
           </div>
