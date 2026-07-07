@@ -42,12 +42,21 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[620px] overflow-hidden md:min-h-[760px]">
-      <div
-        className="hero-bg absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/hero/hero.png')" }}
-      />
+      <video
+        className="absolute inset-0 h-full w-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        poster="/hero-poster.png.png"
+      >
+        <source src="/bobai-hero.mp4.mp4" type="video/mp4" />
+      </video>
 
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/45" />
+
+      <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/35 to-transparent" />
 
       <div className="relative mx-auto flex min-h-[620px] max-w-7xl items-center px-6 py-16 md:min-h-[760px] md:py-0">
         <div className="max-w-3xl text-white">
@@ -83,7 +92,7 @@ export default function Hero() {
             </button>
           </div>
 
-          <div className="mt-10 grid max-w-2xl grid-cols-3 gap-4 border-t border-white/30 pt-6 text-sm text-gray-100 md:mt-12 md:gap-6">
+ <div className="mt-10 grid max-w-2xl grid-cols-3 gap-4 border-t border-white/30 pt-6 text-sm text-gray-100 md:mt-12 md:gap-6">
             <div>
               <p className="text-xl font-bold md:text-2xl">Bobai</p>
               <p className="mt-1">Local Supply</p>
@@ -101,24 +110,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      <style>
-        {`
-          .hero-bg {
-            animation: heroZoom 18s ease-in-out infinite alternate;
-          }
-
-          @keyframes heroZoom {
-            from {
-              transform: scale(1) translateX(0);
-            }
-
-            to {
-              transform: scale(1.12) translateX(-30px);
-            }
-          }
-        `}
-      </style>
     </section>
   );
 }
