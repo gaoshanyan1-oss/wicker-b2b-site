@@ -47,9 +47,10 @@ Location: Bobai, Guangxi, China`;
   function sendToEmail() {
     const subject = encodeURIComponent("New Inquiry from Bobai Wicker Website");
     const body = encodeURIComponent(getInquiryText());
-    const emailUrl = `mailto:gaoshanyan1@gmail.com?subject=${subject}&body=${body}`;
 
-    window.location.href = emailUrl;
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=gaoshanyan1%40gmail.com&su=${subject}&body=${body}`;
+
+    window.open(gmailUrl, "_blank");
   }
 
   return (
@@ -103,12 +104,13 @@ Location: Bobai, Guangxi, China`;
 
                   <p>
                     <span className="font-semibold text-gray-800">Email:</span>{" "}
-                    <a
-                      href="mailto:gaoshanyan1@gmail.com"
-                      className="text-green-800 underline"
+                    <button
+                      type="button"
+                      onClick={sendToEmail}
+                      className="text-left text-green-800 underline"
                     >
                       gaoshanyan1@gmail.com
-                    </a>
+                    </button>
                   </p>
 
                   <p>
