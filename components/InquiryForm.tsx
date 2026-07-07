@@ -44,7 +44,7 @@ Location: Bobai, Guangxi, China`;
     window.open(whatsappUrl, "_blank");
   }
 
-  function sendToEmail() {
+  function sendToGmail() {
     const subject = encodeURIComponent("New Inquiry from Bobai Wicker Website");
     const body = encodeURIComponent(getInquiryText());
 
@@ -106,7 +106,7 @@ Location: Bobai, Guangxi, China`;
                     <span className="font-semibold text-gray-800">Email:</span>{" "}
                     <button
                       type="button"
-                      onClick={sendToEmail}
+                      onClick={sendToGmail}
                       className="text-left text-green-800 underline"
                     >
                       gaoshanyan1@gmail.com
@@ -231,10 +231,10 @@ Location: Bobai, Guangxi, China`;
 
                 <button
                   type="button"
-                  onClick={sendToEmail}
+ onClick={sendToGmail}
                   className="rounded-full border border-green-700 px-8 py-4 font-semibold text-green-800 transition hover:bg-green-50"
                 >
-                  Send via Email
+                  Send via Gmail
                 </button>
               </div>
 
