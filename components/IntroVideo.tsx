@@ -47,9 +47,9 @@ export default function IntroVideo() {
         preload="auto"
       />
 
-      {/* 手机端：播放动态 WebP，避免手机浏览器拦截视频自动播放 */}
+      {/* 手机端：播放动态 WebP */}
       <img
-        src="/bobai-wicker-mobile-animated.webp"
+        src="/bobai-wicker-mobile-animated%20(2).webp"
         alt=""
         className="absolute inset-0 block h-full w-full object-cover md:hidden"
       />
@@ -82,7 +82,7 @@ export default function IntroVideo() {
             </button>
 
             <button
- type="button"
+              type="button"
               onClick={enterWebsite}
               className="rounded-full border border-white/70 px-8 py-4 text-base font-bold text-white transition hover:bg-white hover:text-stone-950"
             >
