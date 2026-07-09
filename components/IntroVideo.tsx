@@ -1,6 +1,30 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+
 export default function IntroVideo() {
+  const desktopVideoRef = useRef<HTMLVideoElement>(null);
+  const mobileVideoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const videos = [desktopVideoRef.current, mobileVideoRef.current];
+
+    videos.forEach((video) => {
+      if (!video) return;
+
+      video.muted = true;
+      video.defaultMuted = true;
+      video.playsInline = true;
+
+      video.setAttribute("muted", "");
+      video.setAttribute("playsinline", "");
+      video.setAttribute("webkit-playsinline", "");
+      video.setAttribute("x5-playsinline", "");
+
+      video.play().catch(() => {});
+    });
+  }, []);
+
   function enterWebsite() {
     const element = document.getElementById("site-home");
 
@@ -14,18 +38,33 @@ export default function IntroVideo() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-stone-950 text-white">
       <video
-        className="absolute inset-0 h-full w-full object-cover"
+        ref={desktopVideoRef}
+        className="absolute inset-0 hidden h-full w-full object-cover md:block"
         autoPlay
         muted
         loop
         playsInline
         preload="auto"
+        poster="/bobai-wicker-poster.jpg"
       >
- <source src="/bobai-wicker-intro.mp4" type="video/mp4" />
+        <source src="/bobai-wicker-intro.mp4" type="video/mp4" />
       </video>
 
-      <div className="absolute inset-0 bg-black/45" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-transparent" />
+      <video
+        ref={mobileVideoRef}
+        className="absolute inset-0 block h-full w-full object-cover md:hidden"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        poster="/bobai-wicker-poster.jpg"
+      >
+        <source src="/bobai-wicker-intro-mobile.mp4" type="video/mp4" />
+      </video>
+
+      <div className="absolute inset-0 bg-black/35" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/25 to-transparent" />
 
       <div className="relative z-10 flex min-h-screen items-center px-6 py-12 sm:px-10 lg:px-20">
         <div className="max-w-3xl">
