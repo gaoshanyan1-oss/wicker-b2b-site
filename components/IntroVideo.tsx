@@ -47,9 +47,9 @@ export default function IntroVideo() {
         preload="auto"
       />
 
-      {/* 手机端：播放动态 WebP */}
+      {/* 手机端：播放 GIF 动图，保证手机打开也会动 */}
       <img
-        src="/bobai-wicker-mobile-animated%20(2).webp"
+        src="/bobai-wicker-mobile-animated.gif"
         alt=""
         className="absolute inset-0 block h-full w-full object-cover md:hidden"
       />
