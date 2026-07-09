@@ -3,26 +3,39 @@
 import { useEffect, useRef } from "react";
 
 export default function IntroVideo() {
-  const desktopVideoRef = useRef<HTMLVideoElement>(null);
-  const mobileVideoRef = useRef<HTMLVideoElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  function playIntroVideo() {
+    const video = videoRef.current;
+
+    if (!video) {
+      return;
+    }
+
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+
+    video.setAttribute("muted", "");
+    video.setAttribute("playsinline", "");
+    video.setAttribute("webkit-playsinline", "");
+    video.setAttribute("x5-playsinline", "");
+
+    video.play().catch(() => {});
+  }
 
   useEffect(() => {
-    const videos = [desktopVideoRef.current, mobileVideoRef.current];
+    playIntroVideo();
 
-    videos.forEach((video) => {
-      if (!video) return;
+    const timer1 = window.setTimeout(playIntroVideo, 500);
+    const timer2 = window.setTimeout(playIntroVideo, 1500);
+    const timer3 = window.setTimeout(playIntroVideo, 3000);
 
-      video.muted = true;
-      video.defaultMuted = true;
-      video.playsInline = true;
-
-      video.setAttribute("muted", "");
-      video.setAttribute("playsinline", "");
-      video.setAttribute("webkit-playsinline", "");
-      video.setAttribute("x5-playsinline", "");
-
-      video.play().catch(() => {});
-    });
+    return () => {
+      window.clearTimeout(timer1);
+      window.clearTimeout(timer2);
+      window.clearTimeout(timer3);
+    };
   }, []);
 
   function enterWebsite() {
@@ -36,32 +49,21 @@ export default function IntroVideo() {
   }
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-stone-950 text-white">
+    <section
+      className="relative min-h-screen overflow-hidden bg-stone-950 text-white"
+      onTouchStart={playIntroVideo}
+      onClick={playIntroVideo}
+    >
       <video
-        ref={desktopVideoRef}
-        className="absolute inset-0 hidden h-full w-full object-cover md:block"
+        ref={videoRef}
+        className="absolute inset-0 h-full w-full object-cover"
+        src="/bobai-wicker-intro.mp4"
         autoPlay
         muted
         loop
         playsInline
         preload="auto"
-        poster="/bobai-wicker-poster.jpg"
-      >
-        <source src="/bobai-wicker-intro.mp4" type="video/mp4" />
-      </video>
-
-      <video
-        ref={mobileVideoRef}
-        className="absolute inset-0 block h-full w-full object-cover md:hidden"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        poster="/bobai-wicker-poster.jpg"
-      >
-        <source src="/bobai-wicker-intro-mobile.mp4" type="video/mp4" />
-      </video>
+      />
 
       <div className="absolute inset-0 bg-black/35" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/25 to-transparent" />
@@ -93,7 +95,7 @@ export default function IntroVideo() {
             <button
               type="button"
               onClick={enterWebsite}
-              className="rounded-full border border-white/70 px-8 py-4 text-base font-bold text-white transition hover:bg-white hover:text-stone-950"
+ className="rounded-full border border-white/70 px-8 py-4 text-base font-bold text-white transition hover:bg-white hover:text-stone-950"
             >
               Scroll to Discover
             </button>
