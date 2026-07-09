@@ -35,11 +35,27 @@ export default function IntroVideo() {
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-stone-950 text-white">
+      <style>
+        {`
+          @keyframes bobaiMobileMove {
+            0% {
+              transform: scale(1.08) translateX(0px) translateY(0px);
+            }
+            50% {
+              transform: scale(1.16) translateX(-14px) translateY(-10px);
+            }
+            100% {
+              transform: scale(1.1) translateX(12px) translateY(10px);
+            }
+          }
+        `}
+      </style>
+
       {/* 电脑端：播放 MP4 视频 */}
       <video
         ref={videoRef}
         className="absolute inset-0 hidden h-full w-full object-cover md:block"
-        src="/bobai-wicker-intro.mp4"
+        src="/bobai-wicker-intro.mp4?v=desktop3"
         autoPlay
         muted
         loop
@@ -47,11 +63,14 @@ export default function IntroVideo() {
         preload="auto"
       />
 
-      {/* 手机端：播放 GIF 动图，保证手机打开也会动 */}
+      {/* 手机端：GIF 动图 + CSS 强制动态效果 */}
       <img
-        src="/bobai-wicker-mobile-animated.gif"
+        src="/bobai-wicker-mobile-animated.gif?v=mobile3"
         alt=""
         className="absolute inset-0 block h-full w-full object-cover md:hidden"
+        style={{
+          animation: "bobaiMobileMove 9s ease-in-out infinite alternate",
+        }}
       />
 
       <div className="absolute inset-0 bg-black/35" />
