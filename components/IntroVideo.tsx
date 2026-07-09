@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 export default function IntroVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  function playIntroVideo() {
+  useEffect(() => {
     const video = videoRef.current;
 
     if (!video) {
@@ -19,23 +19,8 @@ export default function IntroVideo() {
     video.setAttribute("muted", "");
     video.setAttribute("playsinline", "");
     video.setAttribute("webkit-playsinline", "");
-    video.setAttribute("x5-playsinline", "");
 
     video.play().catch(() => {});
-  }
-
-  useEffect(() => {
-    playIntroVideo();
-
-    const timer1 = window.setTimeout(playIntroVideo, 500);
-    const timer2 = window.setTimeout(playIntroVideo, 1500);
-    const timer3 = window.setTimeout(playIntroVideo, 3000);
-
-    return () => {
-      window.clearTimeout(timer1);
-      window.clearTimeout(timer2);
-      window.clearTimeout(timer3);
-    };
   }, []);
 
   function enterWebsite() {
@@ -49,20 +34,24 @@ export default function IntroVideo() {
   }
 
   return (
-    <section
-      className="relative min-h-screen overflow-hidden bg-stone-950 text-white"
-      onTouchStart={playIntroVideo}
-      onClick={playIntroVideo}
-    >
+    <section className="relative min-h-screen overflow-hidden bg-stone-950 text-white">
+      {/* 电脑端：播放 MP4 视频 */}
       <video
         ref={videoRef}
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 hidden h-full w-full object-cover md:block"
         src="/bobai-wicker-intro.mp4"
         autoPlay
         muted
         loop
         playsInline
         preload="auto"
+      />
+
+      {/* 手机端：播放动态 WebP，避免手机浏览器拦截视频自动播放 */}
+      <img
+        src="/bobai-wicker-mobile-animated.webp"
+        alt=""
+        className="absolute inset-0 block h-full w-full object-cover md:hidden"
       />
 
       <div className="absolute inset-0 bg-black/35" />
@@ -93,9 +82,9 @@ export default function IntroVideo() {
             </button>
 
             <button
-              type="button"
+ type="button"
               onClick={enterWebsite}
- className="rounded-full border border-white/70 px-8 py-4 text-base font-bold text-white transition hover:bg-white hover:text-stone-950"
+              className="rounded-full border border-white/70 px-8 py-4 text-base font-bold text-white transition hover:bg-white hover:text-stone-950"
             >
               Scroll to Discover
             </button>
