@@ -49,9 +49,9 @@ export default function Hero() {
         loop
         playsInline
         preload="auto"
-        poster="/hero-poster.png.png"
+        poster="hero-poster.png.png"
       >
-        <source src="/bobai-hero.mp4.mp4" type="video/mp4" />
+        <source src="bobai-hero.mp4.mp4" type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 bg-black/45" />
@@ -69,8 +69,8 @@ export default function Hero() {
           </h1>
 
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-gray-100 md:mt-6 md:text-xl">
-            We manufacture handmade wicker baskets, rattan furniture and
-            natural home decor for wholesalers, retailers and lifestyle brands
+            We manufacture handmade wicker baskets, rattan furniture and natural
+            home decor for wholesalers, retailers and lifestyle brands
             worldwide.
           </p>
 
@@ -92,10 +92,10 @@ export default function Hero() {
             </button>
           </div>
 
- <div className="mt-10 grid max-w-2xl grid-cols-3 gap-4 border-t border-white/30 pt-6 text-sm text-gray-100 md:mt-12 md:gap-6">
+          <div className="mt-10 grid max-w-2xl grid-cols-3 gap-4 border-t border-white/30 pt-6 text-sm text-gray-100 md:mt-12 md:gap-6">
             <div>
               <p className="text-xl font-bold md:text-2xl">Bobai</p>
-              <p className="mt-1">Local Supply</p>
+ <p className="mt-1">Local Supply</p>
             </div>
 
             <div>
