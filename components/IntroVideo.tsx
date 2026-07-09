@@ -55,7 +55,7 @@ export default function IntroVideo() {
       <video
         ref={videoRef}
         className="absolute inset-0 hidden h-full w-full object-cover md:block"
-        src="/bobai-wicker-intro.mp4?v=desktop3"
+        src="bobai-wicker-intro.mp4?v=github1"
         autoPlay
         muted
         loop
@@ -63,9 +63,9 @@ export default function IntroVideo() {
         preload="auto"
       />
 
-      {/* 手机端：GIF 动图 + CSS 强制动态效果 */}
+      {/* 手机端：播放 GIF 动图 + CSS 强制动态效果 */}
       <img
-        src="/bobai-wicker-mobile-animated.gif?v=mobile3"
+        src="bobai-wicker-mobile-animated.gif?v=github1"
         alt=""
         className="absolute inset-0 block h-full w-full object-cover md:hidden"
         style={{
