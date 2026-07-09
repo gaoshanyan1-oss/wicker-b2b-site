@@ -5,42 +5,42 @@ export default function ProductCategories() {
       description:
         "Handwoven baskets for storage, gift packaging, home decoration and retail display.",
       products: "Storage baskets · Gift baskets · Market baskets",
-      image: "/images/categories/basket.png",
+      image: "images/categories/basket.png",
     },
     {
       title: "Rattan Furniture",
       description:
         "Natural rattan chairs, tables, stools and living room furniture for lifestyle brands.",
       products: "Chairs · Tables · Stools · Lounge furniture",
-      image: "/images/categories/furniture.png",
+      image: "images/categories/furniture.png",
     },
     {
       title: "Storage Baskets",
       description:
         "Functional woven storage solutions for home organization, laundry and shelves.",
       products: "Laundry baskets · Shelf baskets · Organizer baskets",
-      image: "/images/categories/storage.png",
+      image: "images/categories/storage.png",
     },
     {
       title: "Pet Baskets",
       description:
         "Comfortable handmade pet beds and baskets for cats, dogs and pet lifestyle stores.",
       products: "Pet beds · Cat baskets · Dog baskets",
-      image: "/images/categories/pet.png",
+      image: "images/categories/pet.png",
     },
     {
       title: "Home Decoration",
       description:
         "Natural woven decor products for modern homes, hotels, resorts and interior brands.",
       products: "Wall decor · Flower baskets · Decorative trays",
-      image: "/images/categories/decor.png",
+      image: "images/categories/decor.png",
     },
     {
       title: "Custom OEM Products",
       description:
         "Custom sizes, shapes, materials, colors and packaging for wholesalers and brands.",
       products: "OEM · ODM · Private label packaging",
-      image: "/images/categories/oem.png",
+      image: "images/categories/oem.png",
     },
   ];
 
