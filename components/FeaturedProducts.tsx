@@ -46,56 +46,56 @@ export default function FeaturedProducts() {
       category: "Rattan Furniture",
       description:
         "Handmade rattan chair for living rooms, hotels and lifestyle brands.",
-      image: "/images/products/chair.png",
+      image: "images/products/chair.png",
     },
     {
       name: "Rattan Coffee Table",
       category: "Rattan Furniture",
       description:
         "Natural woven coffee table for modern home and resort interiors.",
-      image: "/images/products/table.png",
+      image: "images/products/table.png",
     },
     {
       name: "Wicker Stool",
       category: "Home Furniture",
       description:
         "Compact handmade wicker stool for home decoration and retail stores.",
-      image: "/images/products/stool.png",
+      image: "images/products/stool.png",
     },
     {
       name: "Storage Basket",
       category: "Storage Baskets",
       description:
         "Functional woven basket for home organization, shelves and laundry.",
-      image: "/images/products/storage-basket.png",
+      image: "images/products/storage-basket.png",
     },
     {
       name: "Pet Bed",
       category: "Pet Baskets",
       description:
         "Comfortable handmade pet bed for cats, dogs and pet lifestyle brands.",
-      image: "/images/products/pet-bed.png",
+      image: "images/products/pet-bed.png",
     },
     {
       name: "Wicker Lamp Shade",
       category: "Home Decoration",
       description:
         "Natural rattan lamp shade for warm home, hotel and restaurant lighting.",
-      image: "/images/products/lamp.png",
+      image: "images/products/lamp.png",
     },
     {
       name: "Laundry Basket",
       category: "Storage Baskets",
       description:
         "Durable woven laundry basket with natural handmade texture.",
-      image: "/images/products/laundry-basket.png",
+      image: "images/products/laundry-basket.png",
     },
     {
       name: "Flower Basket",
       category: "Home Decoration",
       description:
         "Decorative flower basket for home decor, gifts and retail display.",
-      image: "/images/products/flower-basket.png",
+      image: "images/products/flower-basket.png",
     },
   ];
 
