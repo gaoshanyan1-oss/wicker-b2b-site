@@ -16,19 +16,19 @@ export default function Factory() {
 
   const gallery = [
     {
-      image: "/images/factory/craft.png",
+      image: "images/factory/craft.png",
       alt: "Handmade wicker craftsmanship",
     },
     {
-      image: "/images/factory/workshop.png",
+      image: "images/factory/workshop.png",
       alt: "Wicker production workshop",
     },
     {
-      image: "/images/factory/warehouse.png",
+      image: "images/factory/warehouse.png",
       alt: "Wicker product warehouse",
     },
     {
-      image: "/images/factory/showroom.png",
+      image: "images/factory/showroom.png",
       alt: "Wicker product showroom",
     },
   ];
@@ -80,13 +80,13 @@ export default function Factory() {
           <div>
             <div className="overflow-hidden rounded-3xl shadow-xl">
               <img
-                src="/images/factory/factory.png"
+                src="images/factory/factory.png"
                 alt="Bobai wicker factory workshop"
                 className="h-80 w-full object-cover"
               />
             </div>
 
-            <div className="mt-5 grid grid-cols-2 gap-5">
+ <div className="mt-5 grid grid-cols-2 gap-5">
               {gallery.map((item) => (
                 <div
                   key={item.alt}
